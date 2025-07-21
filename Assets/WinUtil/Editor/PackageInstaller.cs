@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using System.Linq;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
@@ -22,6 +24,9 @@ namespace work.ctrl3d.WinUtil
             
             if (!isUniTaskInstalled) AddGitPackage(UniTaskName, UniTaskGitUrl);
             if (!isWinAPIInstalled) AddGitPackage(WinAPIName, WinAPIGitUrl);
+            
+            if(HasScriptingDefineSymbol("UNITASK_SUPPORT")) return;
+            AddScriptingDefineSymbol("UNITASK_SUPPORT");
         }
         
         private static void AddGitPackage(string packageName, string gitUrl)
@@ -44,6 +49,32 @@ namespace work.ctrl3d.WinUtil
             var path = Path.Combine(Application.dataPath, "../Packages/manifest.json");
             var jsonString = File.ReadAllText(path);
             return jsonString.Contains(packageName);
+        }
+        
+        private static void AddScriptingDefineSymbol(string symbol)
+        {
+            var buildTarget = EditorUserBuildSettings.activeBuildTarget;
+            var targetGroup = BuildPipeline.GetBuildTargetGroup(buildTarget);
+            var namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(targetGroup);
+            
+            var symbols = PlayerSettings.GetScriptingDefineSymbols(namedBuildTarget);
+            if (!symbols.Contains(symbol))
+            {
+                symbols += $";{symbol}";
+            }
+            
+            PlayerSettings.SetScriptingDefineSymbols(namedBuildTarget, symbols);
+        }
+        
+        private static bool HasScriptingDefineSymbol(string symbol)
+        {
+            var buildTarget = EditorUserBuildSettings.activeBuildTarget;
+            var targetGroup = BuildPipeline.GetBuildTargetGroup(buildTarget);
+            var namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(targetGroup);
+            
+            var symbols = PlayerSettings.GetScriptingDefineSymbols(namedBuildTarget);
+            var symbolArray = symbols.Split(';');
+            return symbolArray.Any(existingSymbol => existingSymbol == symbol);
         }
     }
 }
