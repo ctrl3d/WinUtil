@@ -1,0 +1,22 @@
+﻿{
+  "name": "work.ctrl3d.os.winutil",
+  "version": "0.1.0",
+  "displayName": "WinUtil",
+  "description": "",
+  "unity": "2022.1",
+  "documentationUrl": "https://ctrl3d.github.io/WinUtil",
+  "changelogUrl": "https://github.com/ctrl3d/WinUtil/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ctrl3d/WinUtil/blob/main/LICENSE",
+  "dependencies": {
+  },
+  "keywords": [
+    "unity",
+    "win32",
+    "windows"
+  ],
+  "author": {
+    "name": "Seungmin Lee",
+    "email": "ctrl3d@gmail.com",
+    "url": "https://ctrl3d.work"
+  }
+}

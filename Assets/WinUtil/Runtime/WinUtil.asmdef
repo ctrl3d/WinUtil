@@ -1,0 +1,23 @@
+{
+    "name": "WinUtil",
+    "rootNamespace": "work.ctrl3d.OS",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:983bbfabdd276a846a3cab88c6f31865"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.cysharp.unitask",
+            "expression": "",
+            "define": "UNITASK_SUPPORT"
+        }
+    ],
+    "noEngineReferences": false
+}
