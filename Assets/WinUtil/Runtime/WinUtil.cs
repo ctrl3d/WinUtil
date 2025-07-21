@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-namespace work.ctrl3d.OS
+namespace work.ctrl3d
 {
     public static class WinUtil
     {

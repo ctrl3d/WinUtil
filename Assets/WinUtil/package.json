@@ -8,7 +8,6 @@
   "changelogUrl": "https://github.com/ctrl3d/WinUtil/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/ctrl3d/WinUtil/blob/main/LICENSE",
   "dependencies": {
-    "work.ctrl3d.os.winapi": "https://github.com/ctrl3d/WinAPI.git?path=Assets/WinAPI"
   },
   "keywords": [
     "unity",

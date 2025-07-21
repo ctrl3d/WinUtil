@@ -1,6 +1,6 @@
 {
     "name": "WinUtil",
-    "rootNamespace": "work.ctrl3d.OS",
+    "rootNamespace": "work.ctrl3d",
     "references": [
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:983bbfabdd276a846a3cab88c6f31865"

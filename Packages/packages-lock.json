@@ -210,12 +210,12 @@
       },
       "url": "https://packages.unity.com"
     },
-    "work.ctrl3d.os.winapi": {
+    "work.ctrl3d.winapi": {
       "version": "https://github.com/ctrl3d/WinAPI.git?path=Assets/WinAPI",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "ad409f5752d5f97627a6c9d92b7718406859e5e4"
+      "hash": "541cbe5e98dcd76a702923ddcc637e7d5ed9954d"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
