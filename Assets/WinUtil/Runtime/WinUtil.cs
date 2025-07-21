@@ -1,3 +1,4 @@
+#if UNITASK_SUPPORT
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -350,3 +351,4 @@ namespace work.ctrl3d
             WinAPI.SetWindowLong(hWnd, GWL.EXSTYLE, exStyle);
     }
 }
+#endif
